@@ -1,0 +1,388 @@
+:root{
+  --bg:#fff9f6;
+  --card:#ffffff;
+
+  --ink:#2c2326;
+  --muted:#8a6f78;
+
+  --rose:#f1c3cf;
+  --rose2:#fdecef;
+  --gold:#d8b77a;
+
+  --script:"Great Vibes", cursive;
+  --serif:"Cormorant Garamond", serif;
+  --sans:"Inter", system-ui, sans-serif;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:var(--sans);
+  background:
+    radial-gradient(900px 500px at 20% 0%, #fdecef, transparent 60%),
+    radial-gradient(800px 400px at 80% 10%, #fff2f5, transparent 65%),
+    linear-gradient(180deg, var(--bg), #ffffff);
+  color:var(--ink);
+}
+
+.page{
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  padding:24px;
+}
+
+.card{
+  width:min(940px,100%);
+  background:linear-gradient(180deg,#ffffff,#fffdfb);
+  border-radius:32px;
+  border:1px solid rgba(216,183,122,.35);
+  box-shadow:0 35px 90px rgba(0,0,0,.08);
+  overflow:hidden;
+  position:relative;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:14px;
+  border-radius:22px;
+  border:1px solid rgba(216,183,122,.28);
+  pointer-events:none;
+}
+
+/* HEADER */
+.hero{
+  text-align:center;
+  padding:38px 26px 30px;
+}
+
+.topRow{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:0 6px;
+}
+
+.pill,
+.datePill{
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:999px;
+  font-size:12px;
+  letter-spacing:.45px;
+}
+
+.pill{
+  background:var(--rose2);
+  border:1px solid var(--rose);
+  color:#7c5564;
+}
+
+.datePill{
+  background:rgba(255,255,255,.75);
+  border:1px solid rgba(216,183,122,.35);
+  color:#7a5b66;
+  font-family:var(--serif);
+}
+
+.title{
+  margin:18px 0 8px;
+  font-family:var(--serif);
+  font-size:46px;
+  font-weight:500;
+}
+
+.accent{
+  font-family:var(--script);
+  font-size:1.28em;
+  background:linear-gradient(90deg,#e79abb,var(--rose),#c97aa1);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.subtitle{
+  font-family:var(--serif);
+  line-height:1.9;
+  color:var(--muted);
+  margin:8px auto 10px;
+  max-width:62ch;
+}
+
+.bunnyOrnament{
+  margin:10px auto 6px;
+  font-size:18px;
+  opacity:.55;
+  position:relative;
+}
+
+.bunnyOrnament::before,
+.bunnyOrnament::after{
+  content:"";
+  display:inline-block;
+  width:34px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  vertical-align:middle;
+  margin:0 12px;
+}
+
+/* COUNTDOWN */
+.countdown{
+  margin:16px auto 22px;
+  padding:12px 22px;
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  border-radius:999px;
+  background:linear-gradient(180deg,#ffffff,#fff6f9);
+  border:1px solid rgba(216,183,122,.45);
+  font-family:var(--serif);
+  box-shadow:0 10px 30px rgba(216,183,122,.18);
+}
+
+.countLabel{
+  font-size:12px;
+  color:var(--muted);
+}
+
+.countValue{
+  font-weight:600;
+  letter-spacing:.4px;
+  color:#6b4c2f;
+}
+
+/* FOTO */
+.photoWrap{ margin-top:20px; }
+
+.photoFrame{
+  width:220px;
+  aspect-ratio:1/1;
+  border-radius:50%;
+  padding:10px;
+  background:radial-gradient(circle at 30% 20%, #fff, var(--rose2));
+  border:1px solid var(--rose);
+  margin:auto;
+  box-shadow:0 18px 40px rgba(216,183,122,.2);
+}
+
+.photoFrame img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.photoCaption{
+  margin-top:8px;
+  font-family:var(--serif);
+  color:#7b5a67;
+}
+
+.themeNote{
+  margin:14px auto 0;
+  max-width:62ch;
+  font-family:var(--serif);
+  color:#8c6a76;
+  line-height:1.8;
+}
+
+/* CONTENT */
+.content{ padding:26px; }
+
+/* PANE */
+.pane{
+  border:1px solid rgba(216,183,122,.3);
+  border-radius:26px;
+  padding:22px;
+  margin-bottom:22px;
+  background:linear-gradient(180deg,#ffffff,#fffaf8);
+}
+
+.paneHead{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  justify-content:flex-start;
+  margin-bottom:10px;
+}
+
+/* ICON în medalion */
+.storyIcon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, #fff, var(--rose2));
+  border:1px solid rgba(216,183,122,.45);
+  color:#9a6b80;
+  font-size:18px;
+  box-shadow:0 6px 18px rgba(216,183,122,.25);
+  flex:0 0 auto;
+  margin-top:2px;
+}
+
+.paneTitle{
+  font-family:var(--serif);
+  margin:0;
+  font-size:19px;
+  letter-spacing:.2px;
+}
+
+.paneMain{ font-weight:600; margin:6px 0 2px; }
+.paneMuted{ color:var(--muted); margin:0; }
+
+.paneStory{
+  margin-top:10px;
+  font-family:var(--serif);
+  font-style:italic;
+  text-align:center;
+  color:#8c6a76;
+  line-height:1.85;
+}
+
+.partyStory{
+  margin-top:12px;
+  font-family:var(--serif);
+  font-style:italic;
+  text-align:center;
+  line-height:1.9;
+  color:#8a5a6f;
+}
+
+.routeNote{
+  margin-top:14px;
+  text-align:center;
+  font-family:var(--serif);
+  font-size:14px;
+  color:#9a7a86;
+}
+
+/* Buttons */
+.actions{
+  margin-top:14px;
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.actions.center{ justify-content:center; }
+
+.btn{
+  padding:11px 18px;
+  border-radius:999px;
+  border:1px solid rgba(241,195,207,.9);
+  background:linear-gradient(180deg,#ffffff,#fff7fa);
+  text-decoration:none;
+  font-weight:500;
+  color:var(--ink);
+  transition:all .25s ease;
+  cursor:pointer;
+}
+
+.btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 8px 22px rgba(216,183,122,.25);
+}
+
+.btn.ghost{
+  background:transparent;
+  border-color:transparent;
+  color:var(--muted);
+  box-shadow:none;
+}
+
+.btn.primary{
+  border-color:rgba(216,183,122,.6);
+}
+
+/* Părinți / Nași */
+.wide .split{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  gap:20px;
+  align-items:center;
+}
+
+.divider{
+  width:1px;
+  height:64px;
+  background:linear-gradient(180deg,transparent,var(--gold),transparent);
+}
+
+.smallTitle{
+  font-family:var(--serif);
+  color:var(--muted);
+  margin:0 0 8px;
+}
+
+.bigNames{
+  font-family:var(--serif);
+  font-size:22px;
+  line-height:1.6;
+  margin:0;
+}
+
+.who{ text-align:center; }
+
+/* RSVP / Contact */
+.rsvp .paneHead{ margin-bottom:14px; }
+
+.helperNote{
+  margin-top:12px;
+  text-align:center;
+  font-size:13px;
+  font-family:var(--serif);
+  color:#9a7a86;
+  line-height:1.55;
+}
+
+.contactBox{
+  margin-top:16px;
+  padding:14px;
+  border-radius:18px;
+  border:1px solid rgba(216,183,122,.28);
+  background:linear-gradient(180deg,#ffffff,#fff6f9);
+  text-align:center;
+}
+
+.contactTitle{
+  font-family:var(--serif);
+  color:#7a5b66;
+  margin-bottom:10px;
+  letter-spacing:.2px;
+}
+
+.copyHint{
+  margin-top:10px;
+  font-family:var(--serif);
+  color:#9a7a86;
+  font-size:13px;
+}
+
+/* Footer */
+.footer{
+  text-align:center;
+  padding:18px 14px 22px;
+  font-family:var(--serif);
+  color:#7a5b66;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .title{ font-size:38px; }
+  .photoFrame{ width:190px; }
+  .topRow{ justify-content:center; }
+  .datePill{ display:none; }
+  .wide .split{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+  .divider{ display:none; }
+}

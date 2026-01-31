@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botezul Mara-Ilinca</title>
+
+    <!-- Fonturi elegante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <main class="page">
+        <section class="card">
+
+            <!-- HEADER -->
+            <header class="hero">
+                <div class="topRow">
+                    <span class="pill">Invitație</span>
+                    <span class="datePill">09 • 05 • 2026</span>
+                </div>
+
+                <h1 class="title">
+                    Botezul <span class="accent">Mara-Ilinca</span>
+                </h1>
+
+                <p class="subtitle">
+                    Într-o zi de primăvară cu lumină blândă,<br />
+                    Mara-Ilinca primește binecuvântarea primilor pași.<br />
+                    Vă invităm să ne fiți alături la acest început de poveste.
+                </p>
+
+                <div class="bunnyOrnament">🐰</div>
+
+                <!-- COUNTDOWN -->
+                <div class="countdown" aria-label="Countdown">
+                    <span class="countLabel">Până la eveniment</span>
+                    <span id="countdownValue" class="countValue">—</span>
+                </div>
+
+                <!-- FOTO -->
+                <div class="photoWrap" aria-label="Fotografie Mara-Ilinca">
+                    <div class="photoFrame">
+                        <img src="assets/foto.png" alt="Mara-Ilinca" loading="lazy" />
+                    </div>
+                    <div class="photoCaption">Mara-Ilinca 🐰</div>
+                </div>
+
+                <p class="themeNote">
+                    O poveste roz-șampanie, cu pași mici și multă iubire.
+                </p>
+            </header>
+
+            <!-- CONTINUT -->
+            <section class="content">
+
+                <!-- CEREMONIE -->
+                <article class="pane">
+                    <div class="paneHead">
+                        <div class="storyIcon" aria-hidden="true">⛪</div>
+                        <div>
+                            <h2 class="paneTitle">Ceremonia religioasă</h2>
+                            <p class="paneMuted">Sâmbătă, 9 mai 2026 • Ora 16:00</p>
+                        </div>
+                    </div>
+
+                    <p class="paneMain">Biserica Oborul Nou</p>
+                    <p class="paneMuted">București</p>
+
+                    <p class="paneStory">
+                        Aici, Mara-Ilinca va primi binecuvântarea<br />
+                        primului pas pe drumul vieții.
+                    </p>
+
+                    <p class="routeNote">📍 Drumul către acest loc:</p>
+                    <div class="actions">
+                        <a id="mapsChurch" class="btn" target="_blank" rel="noopener">Google Maps</a>
+                        <a id="wazeChurch" class="btn ghost" target="_blank" rel="noopener">Waze</a>
+                    </div>
+                </article>
+
+                <!-- PETRECERE -->
+                <article class="pane">
+                    <div class="paneHead">
+                        <div class="storyIcon" aria-hidden="true">🎀</div>
+                        <div>
+                            <h2 class="paneTitle">Petrecerea</h2>
+                            <p class="paneMuted">Sâmbătă, 9 mai 2026 • Ora 17:00</p>
+                        </div>
+                    </div>
+
+                    <p class="paneMain">Simposio Events</p>
+                    <p class="paneMuted">București</p>
+
+                    <p class="partyStory">
+                        După emoția binecuvântării,<br />
+                        ne adunăm pentru a sărbători<br />
+                        cu zâmbete, lumină și bucurie.
+                    </p>
+
+                    <p class="routeNote">📍 Drumul către acest loc:</p>
+                    <div class="actions">
+                        <a id="mapsRest" class="btn" target="_blank" rel="noopener">Google Maps</a>
+                        <a id="wazeRest" class="btn ghost" target="_blank" rel="noopener">Waze</a>
+                    </div>
+                </article>
+
+                <!-- PĂRINȚI / NAȘI -->
+                <article class="pane wide">
+                    <div class="split">
+                        <div class="who">
+                            <h3 class="smallTitle">Părinți</h3>
+                            <p class="bigNames">Mihai Ionela-Roxana</p>
+                            <p class="bigNames">Babuș Gabriel</p>
+                        </div>
+
+                        <div class="divider" aria-hidden="true"></div>
+
+                        <div class="who">
+                            <h3 class="smallTitle">Nași</h3>
+                            <p class="bigNames">Daguleli Ionuț Danuț</p>
+                            <p class="bigNames">Anca Nicoleta</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- RSVP + CONTACT -->
+                <article class="pane rsvp">
+                    <div class="paneHead">
+                        <div class="storyIcon" aria-hidden="true">🤍</div>
+                        <div>
+                            <h2 class="paneTitle">Confirmare prezență</h2>
+                            <p class="paneMuted">Un gând trimis din inimă ne ajută să pregătim această zi.</p>
+                        </div>
+                    </div>
+
+                    <div class="actions center">
+                        <a id="waYes" class="btn primary">Confirm</a>
+                        <a id="waMaybe" class="btn">Posibil</a>
+                        <a id="waNo" class="btn ghost">Nu pot</a>
+                    </div>
+
+                    <p class="helperNote">
+                        Butonul „Confirm” deschide WhatsApp cu mesajul pregătit. Locațiile au Google Maps și Waze.
+                    </p>
+
+                    <div class="contactBox">
+                        <div class="contactTitle">Telefon pentru detalii</div>
+                        <a id="callBtn" class="btn" href="tel:+40754857249">📞 0754 857 249</a>
+                        <button id="copyBtn" class="btn ghost" type="button">Copiază numărul</button>
+                        <div id="copyHint" class="copyHint">Numărul se copiază în clipboard.</div>
+                    </div>
+                </article>
+
+            </section>
+
+            <footer class="footer">
+                Cu drag, vă așteptăm să faceți parte din povestea noastră 🤍
+            </footer>
+
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
